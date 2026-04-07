@@ -54,7 +54,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             </button>
 
             {/* Left: Image */}
-            <div className="w-full md:w-1/2 h-[40vh] md:h-auto bg-lilac/20 relative">
+            <div className="w-full md:w-1/2 h-[35vh] sm:h-[40vh] md:h-auto bg-lilac/20 relative flex-shrink-0">
               <motion.img 
                 key={selectedColorIdx}
                 initial={{ opacity: 0.8 }}
@@ -66,7 +66,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
             </div>
 
             {/* Right: Details */}
-            <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col overflow-y-auto">
+            <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col overflow-y-auto">
               <h2 className="text-3xl md:text-5xl font-serif text-primary mb-2 leading-tight">
                 {product.title}
               </h2>

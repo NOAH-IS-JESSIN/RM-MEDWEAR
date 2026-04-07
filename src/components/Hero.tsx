@@ -14,12 +14,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-background/80 pointer-events-none" />
         
         {/* Left Content */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 md:py-0 relative z-10">
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 py-16 md:py-0 relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-8 text-[#18474f]"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-8 text-[#18474f]"
           >
             Where style<br />meets purpose.
           </motion.h1>
@@ -36,14 +36,14 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="bg-primary text-background px-10 py-4 text-sm font-medium tracking-widest hover:bg-sage transition-colors duration-300 w-fit relative z-20">
+            <button className="bg-primary text-background px-8 sm:px-10 py-4 text-sm font-medium tracking-widest hover:bg-sage transition-colors duration-300 w-fit relative z-20">
               DISCOVER THE DROP
             </button>
           </motion.div>
         </div>
 
         {/* Right Video */}
-        <div className="w-full md:w-1/2 min-h-[60vh] md:min-h-screen bg-black relative overflow-hidden">
+        <div className="w-full md:w-1/2 min-h-[50vh] md:min-h-screen bg-black relative overflow-hidden">
           <motion.video 
             initial={{ scale: 1.05 }}
             animate={{ scale: 1 }}
@@ -57,21 +57,35 @@ export default function Hero() {
           />
         </div>
 
-        {/* Overlapping Video Overlay */}
+        {/* Mobile Video Overlay (Gradient base) */}
+        <div className="absolute inset-x-0 bottom-0 top-[50%] z-30 bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7]/80 to-transparent transition-all duration-700 ease-in-out group-hover:opacity-0 flex md:hidden flex-col justify-end items-center pb-12 pointer-events-none">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="text-3xl sm:text-4xl font-serif tracking-widest text-center uppercase leading-tight px-4"
+            style={{ color: '#18474f' }}
+          >
+            Sophistication<br/>
+            <span className="text-xl sm:text-2xl font-light italic lowercase">in every detail</span>
+          </motion.h2>
+        </div>
+
+        {/* Desktop Video Overlay (Polygonal) */}
         <div 
-          className="absolute inset-0 z-30 bg-[#fdfbf7]/95 transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 pointer-events-none flex items-center justify-end md:pr-16 pt-20 md:pt-0"
+          className="absolute inset-0 z-30 bg-[#fdfbf7]/95 transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-105 pointer-events-none hidden md:flex items-center justify-end pr-16"
           style={{ clipPath: 'polygon(62% 0%, 100% 0%, 100% 60%, 100% 100%, 45% 100%, 39% 55%, 50% 14%)' }}
         >
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-1/2 flex justify-center">
             <motion.h2 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-7xl font-serif tracking-widest text-center uppercase leading-tight px-4"
+              className="text-5xl lg:text-7xl font-serif tracking-widest text-center uppercase leading-tight px-4"
               style={{ color: '#18474f' }}
             >
               Sophistication<br/>
-              <span className="text-2xl md:text-4xl font-light italic lowercase">in every detail</span>
+              <span className="text-3xl lg:text-4xl font-light italic lowercase">in every detail</span>
             </motion.h2>
           </div>
         </div>

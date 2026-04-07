@@ -67,7 +67,7 @@ export default function CartPage() {
                 className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center py-6 border-b border-ui/50"
               >
                 {/* Product Info */}
-                <div className="col-span-1 border-ui/50 pb-4 mb-4 sm:col-span-6 flex gap-6 sm:border-0 sm:p-0 sm:m-0 border-b">
+                <div className="col-span-1 border-ui/50 pb-4 mb-4 sm:col-span-6 flex gap-4 sm:gap-6 sm:border-0 sm:p-0 sm:m-0 border-b">
                   <div className="w-24 h-32 bg-lilac/20 flex-shrink-0">
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                   </div>
